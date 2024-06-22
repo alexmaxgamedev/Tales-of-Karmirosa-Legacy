@@ -1,0 +1,121 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Prefabs/Enemies/Guard.tscn" type="PackedScene" id=2]
+
+[node name="Sector 1 Enemies" type="Spatial"]
+
+[node name="Guard 29" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -75, 2.665, -261 )
+sector_id = 1
+
+[node name="Guard 28" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -87, 2.665, -249 )
+sector_id = 1
+
+[node name="Guard 27" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -93, 2.665, -207 )
+sector_id = 1
+
+[node name="Guard 26" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -117, 2.665, -183 )
+sector_id = 1
+
+[node name="Guard 25" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -111, 2.665, -147 )
+sector_id = 1
+
+[node name="Guard 24" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -99, 2.665, -111 )
+sector_id = 1
+
+[node name="Guard 23" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -81, 2.665, -117 )
+sector_id = 1
+
+[node name="Guard 22" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -51, 2.665, -117 )
+sector_id = 1
+
+[node name="Guard 21" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -51, 2.665, -81 )
+sector_id = 1
+
+[node name="Guard 20" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -39, 2.665, -63 )
+sector_id = 1
+
+[node name="Guard 19" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 2.665, -81 )
+sector_id = 1
+
+[node name="Guard 18" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 2.665, -105 )
+sector_id = 1
+
+[node name="Guard 17" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 2.665, -93 )
+sector_id = 1
+
+[node name="Guard 16" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 2.665, -63 )
+sector_id = 1
+
+[node name="Guard 15" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 69, 2.665, -57 )
+sector_id = 1
+
+[node name="Guard 14" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 2.665, -75 )
+sector_id = 1
+
+[node name="Guard 13" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 69, 2.665, -111 )
+sector_id = 1
+
+[node name="Guard 12" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 57, 2.665, -81 )
+sector_id = 1
+
+[node name="Guard 11" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 81, 2.665, -135 )
+sector_id = 1
+
+[node name="Guard 10" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 2.665, -135 )
+sector_id = 1
+
+[node name="Guard 9" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -39, 2.665, -159 )
+sector_id = 1
+
+[node name="Guard 8" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -57, 2.665, -159 )
+sector_id = 1
+
+[node name="Guard 7" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -63, 2.665, -201 )
+sector_id = 1
+
+[node name="Guard 6" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33, 2.665, -213 )
+sector_id = 1
+
+[node name="Guard 5" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 2.665, -135 )
+sector_id = 1
+
+[node name="Guard 4" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 2.665, -183 )
+sector_id = 1
+
+[node name="Guard 3" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 2.665, -183 )
+sector_id = 1
+
+[node name="Guard 2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 2.665, -135 )
+sector_id = 1
+
+[node name="Guard 1" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 2.665, -159 )
+sector_id = 1
