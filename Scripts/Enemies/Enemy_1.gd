@@ -43,9 +43,6 @@ func _ready() -> void:
 func _physics_process(delta) -> void:
 	frame_counter += 1
 	
-	if is_hurt:
-		return
-	
 	if frame_counter == interval:
 		raycast.force_raycast_update()
 		ray_collider = raycast.get_collider()
@@ -59,6 +56,9 @@ func _physics_process(delta) -> void:
 			can_deactivate = true
 
 		frame_counter = 0
+
+	if is_hurt:
+		return
 
 	raycast.look_at(PlayerStats.player.camera.global_transform.origin, Vector3.UP)
 
