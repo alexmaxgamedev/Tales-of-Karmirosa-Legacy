@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Models/Decorations/Tree Decoration.mesh" type="ArrayMesh" id=1]
+[ext_resource path="res://Materials/Environment/Environment.material" type="Material" id=2]
+
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.375912, 1.59996, 0.394707 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 2.17528, 2.16207, 2.21152 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 1.23118, 1.22804, 1.25 )
+
+[node name="Tree Decoration" type="Spatial"]
+
+[node name="Mesh" type="MeshInstance" parent="."]
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 2 )
+
+[node name="Static" type="StaticBody" parent="Mesh"]
+input_ray_pickable = false
+
+[node name="Collision" type="CollisionShape" parent="Mesh/Static"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.07797, 0 )
+shape = SubResource( 1 )
+
+[node name="Collision2" type="CollisionShape" parent="Mesh/Static"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.9045, 0 )
+shape = SubResource( 2 )
+
+[node name="Collision3" type="CollisionShape" parent="Mesh/Static"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19213, 0 )
+shape = SubResource( 3 )

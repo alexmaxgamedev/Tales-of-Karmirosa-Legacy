@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Models/Interactables/Barrel.mesh" type="ArrayMesh" id=1]
+[ext_resource path="res://Materials/Environment/Environment.material" type="Material" id=2]
+[ext_resource path="res://Scripts/Environment/Barrel.gd" type="Script" id=3]
+
+[sub_resource type="PhysicsMaterial" id=1]
+rough = true
+absorbent = true
+
+[sub_resource type="CylinderShape" id=2]
+radius = 1.56
+height = 3.5
+
+[node name="Barrel" type="RigidBody" groups=[
+"Movable",
+]]
+mass = 10.0
+physics_material_override = SubResource( 1 )
+continuous_cd = true
+sleeping = true
+script = ExtResource( 3 )
+
+[node name="Collision" type="CollisionShape" parent="."]
+shape = SubResource( 2 )
+
+[node name="Mesh" type="MeshInstance" parent="."]
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 2 )

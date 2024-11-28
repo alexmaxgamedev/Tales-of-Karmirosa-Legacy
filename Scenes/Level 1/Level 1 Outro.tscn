@@ -1,0 +1,112 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Textures/Interface/Intro.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/Kenpixel_Square.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Audio/Sound Effects/intro_outro_loop.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Themes/Theme.tres" type="Theme" id=4]
+[ext_resource path="res://Prefabs/Player/Debug.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scripts/Interface/ChangeScene.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=2]
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Text:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Credits:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+}
+
+[node name="Level 1 Outro" type="Node"]
+
+[node name="Interface" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texture" type="TextureRect" parent="Interface"]
+self_modulate = Color( 0.333333, 0.298039, 0.298039, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="Button" parent="Interface"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -136.0
+margin_top = -56.0
+margin_right = -16.0
+margin_bottom = -16.0
+rect_pivot_offset = Vector2( 60, 20 )
+focus_mode = 0
+theme = ExtResource( 4 )
+text = "Credits"
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+level_name = "Credits"
+
+[node name="Text" type="Label" parent="Interface"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -420.0
+margin_top = -255.5
+margin_right = 420.0
+margin_bottom = 255.5
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.92549, 0.768627, 0.0470588, 1 )
+text = "Congratulations, you have cleared your 
+way to the research section of the base. 
+Gather the documents and 
+escape!
+
+To Be Continued..."
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Audio" type="AudioStreamPlayer" parent="Interface"]
+stream = ExtResource( 3 )
+autoplay = true
+bus = "Music"
+
+[node name="Animation" type="AnimationPlayer" parent="Interface"]
+autoplay = "Begin"
+anims/Begin = SubResource( 2 )
+
+[node name="Debug" parent="." instance=ExtResource( 5 )]
