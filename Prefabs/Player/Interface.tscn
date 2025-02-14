@@ -1,0 +1,646 @@
+[gd_scene load_steps=33 format=2]
+
+[ext_resource path="res://Fonts/Kenpixel_Square.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/Player/Inventory.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Interface/UserInterface.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Player/Pistol.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Interface/ChangeScene.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/Player/PlayerHealth.gd" type="Script" id=6]
+[ext_resource path="res://Prefabs/Player/Settings.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Audio/Sound Effects/pistol_sound_effect.wav" type="AudioStream" id=8]
+[ext_resource path="res://Themes/Theme.tres" type="Theme" id=10]
+[ext_resource path="res://Textures/Interface/Crosshair.png" type="Texture" id=11]
+[ext_resource path="res://Audio/Sound Effects/death_sound_effect.wav" type="AudioStream" id=12]
+[ext_resource path="res://Audio/Sound Effects/win_sound_effect.wav" type="AudioStream" id=13]
+[ext_resource path="res://Textures/Interface/Pistol.png" type="Texture" id=14]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.85098, 0.470588, 0.470588, 0 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "damage"
+length = 0.3
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_styles/panel:bg_color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.85098, 0.470588, 0.470588, 0 ), Color( 0.85098, 0.470588, 0.470588, 0.486275 ), Color( 0.85098, 0.470588, 0.470588, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_styles/panel:bg_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.85098, 0.470588, 0.470588, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "fire"
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Texture:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 0 ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Texture:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.266667, 1, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.321569, 0.831373, 0.858824, 0.462745 )
+
+[sub_resource type="DynamicFont" id=8]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=9]
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.729412, 0.737255, 0.627451, 0.188235 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 56
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 40
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.596078, 0.352941, 0.352941, 0 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 70
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 0.227451, 0.227451, 0.227451, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.8, 0.105882, 0.054902, 1 )
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 0.113725, 0.113725, 0.113725, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.8, 0.105882, 0.054902, 1 )
+
+[sub_resource type="StyleBoxFlat" id=17]
+bg_color = Color( 0.176471, 0.176471, 0.176471, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.8, 0.105882, 0.054902, 1 )
+
+[sub_resource type="Animation" id=18]
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel:custom_styles/panel:bg_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.596078, 0.352941, 0.352941, 0 ), Color( 0.596078, 0.352941, 0.352941, 0.294118 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Gameplay:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Panel/Buttons:rect_scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Panel/Label:rect_scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+}
+tracks/5/type = "audio"
+tracks/5/path = NodePath("Death Audio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 12 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=19]
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "load_outro"
+} ]
+}
+tracks/3/type = "audio"
+tracks/3/path = NodePath("Win Audio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 13 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[node name="Interface" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="Crosshair" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -8.0
+margin_top = -8.0
+margin_right = 8.0
+margin_bottom = 8.0
+mouse_filter = 2
+texture = ExtResource( 11 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hurt Panel" type="Panel" parent="."]
+pause_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+custom_styles/panel = SubResource( 1 )
+
+[node name="Animation" type="AnimationPlayer" parent="Hurt Panel"]
+autoplay = "default"
+anims/damage = SubResource( 2 )
+anims/default = SubResource( 3 )
+
+[node name="Gameplay" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Pistol" type="Control" parent="Gameplay"]
+pause_mode = 1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -608.0
+margin_top = -480.0
+margin_right = -128.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+ammo_counter_path = NodePath("../../../Interface/Gameplay/Ammo Counter")
+
+[node name="Texture" type="Sprite" parent="Gameplay/Pistol"]
+position = Vector2( 240, 240 )
+scale = Vector2( 15, 15 )
+texture = ExtResource( 14 )
+hframes = 4
+
+[node name="Animation" type="AnimationPlayer" parent="Gameplay/Pistol"]
+autoplay = "idle"
+playback_speed = 1.25
+anims/fire = SubResource( 5 )
+anims/idle = SubResource( 4 )
+
+[node name="Audio" type="AudioStreamPlayer" parent="Gameplay/Pistol"]
+stream = ExtResource( 8 )
+pitch_scale = 0.9
+bus = "SFX"
+
+[node name="Health Bar" type="ProgressBar" parent="Gameplay"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = -8.0
+margin_right = 120.0
+margin_bottom = 8.0
+rect_rotation = -89.9999
+mouse_filter = 2
+custom_styles/fg = SubResource( 6 )
+custom_styles/bg = SubResource( 7 )
+value = 100.0
+percent_visible = false
+script = ExtResource( 6 )
+label_path = NodePath("../../../Interface/Gameplay/Health Bar/Health Value")
+interface_path = NodePath("../..")
+damage_animation_path = NodePath("../../Hurt Panel/Animation")
+
+[node name="Health Value" type="Label" parent="Gameplay/Health Bar"]
+anchor_left = -0.033
+anchor_top = 1.241
+anchor_right = -0.033
+anchor_bottom = 1.241
+margin_left = 24.0289
+margin_top = -0.244734
+margin_right = 64.0289
+margin_bottom = 23.7553
+rect_rotation = 89.9999
+custom_colors/font_color = Color( 0.266667, 1, 0, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "100"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ammo Counter" type="Label" parent="Gameplay"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -55.0
+margin_top = -32.0
+margin_right = 1.0
+custom_colors/font_color = Color( 0.905882, 0.8, 0.113725, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "100"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pause Menu" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Pause Menu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+custom_styles/panel = SubResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="Pause Menu/Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -350.0
+margin_top = 60.0
+margin_right = 350.0
+margin_bottom = 150.0
+custom_colors/font_color = Color( 0.901961, 0.796078, 0.0941176, 1 )
+custom_fonts/font = SubResource( 11 )
+text = "Tales of Karmirosa"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="Label" parent="Pause Menu/Panel/Title"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -120.0
+margin_top = -10.0
+margin_right = 120.0
+margin_bottom = 50.0
+custom_colors/font_color = Color( 0.901961, 0.796078, 0.0941176, 1 )
+custom_fonts/font = SubResource( 12 )
+text = "Legacy"
+align = 1
+valign = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttons" type="VBoxContainer" parent="Pause Menu/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -75.0
+margin_right = 100.0
+margin_bottom = 75.0
+mouse_filter = 2
+custom_constants/separation = 15
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resume" type="Button" parent="Pause Menu/Panel/Buttons"]
+margin_right = 200.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+focus_mode = 0
+theme = ExtResource( 10 )
+text = "Resume"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Settings" type="Button" parent="Pause Menu/Panel/Buttons"]
+margin_top = 55.0
+margin_right = 200.0
+margin_bottom = 95.0
+rect_min_size = Vector2( 0, 40 )
+focus_mode = 0
+theme = ExtResource( 10 )
+text = "Settings"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="Button" parent="Pause Menu/Panel/Buttons"]
+margin_top = 110.0
+margin_right = 200.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 0, 40 )
+focus_mode = 0
+theme = ExtResource( 10 )
+text = "Menu"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+level_name = "Menu"
+
+[node name="Settings" parent="Pause Menu/Panel" instance=ExtResource( 7 )]
+visible = false
+
+[node name="Death Panel" type="Control" parent="."]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Panel" type="Panel" parent="Death Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Death Panel/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = -244.0
+margin_right = 250.0
+margin_bottom = -124.0
+rect_scale = Vector2( 1e-05, 1e-05 )
+rect_pivot_offset = Vector2( 250, 60 )
+custom_colors/font_color = Color( 0.8, 0.105882, 0.054902, 1 )
+custom_fonts/font = SubResource( 14 )
+text = "Game Over"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttons" type="VBoxContainer" parent="Death Panel/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -47.5
+margin_right = 100.0
+margin_bottom = 47.5
+rect_scale = Vector2( 1e-05, 1e-05 )
+rect_pivot_offset = Vector2( 100, 47.5 )
+custom_constants/separation = 15
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Restart" type="Button" parent="Death Panel/Panel/Buttons"]
+margin_right = 200.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+focus_mode = 0
+theme = ExtResource( 10 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.8, 0.105882, 0.054902, 1 )
+custom_colors/font_color_hover = Color( 0.8, 0.105882, 0.054902, 1 )
+custom_colors/font_color_pressed = Color( 0.596078, 0.109804, 0.0745098, 1 )
+custom_styles/hover = SubResource( 15 )
+custom_styles/pressed = SubResource( 16 )
+custom_styles/normal = SubResource( 17 )
+text = "Restart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="Button" parent="Death Panel/Panel/Buttons"]
+margin_top = 55.0
+margin_right = 200.0
+margin_bottom = 95.0
+rect_min_size = Vector2( 0, 40 )
+focus_mode = 0
+theme = ExtResource( 10 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.8, 0.105882, 0.054902, 1 )
+custom_colors/font_color_hover = Color( 0.8, 0.105882, 0.054902, 1 )
+custom_colors/font_color_pressed = Color( 0.596078, 0.109804, 0.0745098, 1 )
+custom_styles/hover = SubResource( 15 )
+custom_styles/pressed = SubResource( 16 )
+custom_styles/normal = SubResource( 17 )
+text = "Menu"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+level_name = "Menu"
+
+[node name="Animation" type="AnimationPlayer" parent="Death Panel"]
+anims/appear = SubResource( 18 )
+
+[node name="Death Audio" type="AudioStreamPlayer" parent="Death Panel"]
+stream = ExtResource( 12 )
+bus = "SFX"
+
+[node name="Win Panel" type="Control" parent="."]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Win Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -230.0
+margin_top = -64.0
+margin_right = 230.0
+margin_bottom = 64.0
+rect_scale = Vector2( 1e-05, 1e-05 )
+rect_pivot_offset = Vector2( 230, 64 )
+custom_colors/font_color = Color( 0.890196, 0.694118, 0.101961, 1 )
+custom_fonts/font = SubResource( 14 )
+text = "You Won!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Animation" type="AnimationPlayer" parent="Win Panel"]
+anims/appear = SubResource( 19 )
+
+[node name="Win Audio" type="AudioStreamPlayer" parent="Win Panel"]
+stream = ExtResource( 13 )
+bus = "SFX"
+
+[node name="Inventory" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[connection signal="value_changed" from="Gameplay/Health Bar" to="Gameplay/Health Bar" method="_on_ProgressBar_value_changed"]
+[connection signal="pressed" from="Pause Menu/Panel/Buttons/Resume" to="." method="_on_Resume_pressed"]
+[connection signal="pressed" from="Pause Menu/Panel/Buttons/Settings" to="Pause Menu/Panel/Settings" method="_on_Open_Settings_Button_pressed"]
+[connection signal="pressed" from="Death Panel/Panel/Buttons/Restart" to="." method="_on_Restart_pressed"]

@@ -1,0 +1,277 @@
+[gd_scene load_steps=40 format=2]
+
+[ext_resource path="res://Materials/Debug/Magenta.material" type="Material" id=1]
+[ext_resource path="res://Scripts/Environment/SectorDebugMesh.gd" type="Script" id=2]
+[ext_resource path="res://Materials/Debug/Cyan.material" type="Material" id=3]
+[ext_resource path="res://Scenes/Level 1/Sector 2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scripts/Environment/End.gd" type="Script" id=5]
+[ext_resource path="res://Materials/Debug/Green.material" type="Material" id=6]
+[ext_resource path="res://Scripts/Environment/LevelInitializer.gd" type="Script" id=7]
+[ext_resource path="res://Scripts/Environment/MusicManager.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/Environment/SectorManager.gd" type="Script" id=9]
+[ext_resource path="res://Scripts/Enemies/BossBattle.gd" type="Script" id=10]
+[ext_resource path="res://Materials/Debug/Yellow.material" type="Material" id=11]
+[ext_resource path="res://Prefabs/Player/Interface.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Prefabs/Player/Debug.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Level 1/Sector 1 Enemies.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Level 1/Sector 2 Enemies.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Prefabs/Player/Player.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scripts/Environment/SectorBoundary.gd" type="Script" id=17]
+[ext_resource path="res://Scenes/Level 1/Sector 1.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Materials/Debug/Purple.material" type="Material" id=19]
+[ext_resource path="res://Materials/Debug/Orange.material" type="Material" id=20]
+[ext_resource path="res://Scenes/Level 1/Sector 2 Interactables.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scenes/Level 1/Sector 1 Interactables.tscn" type="PackedScene" id=22]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 3, 3, 3 )
+
+[sub_resource type="CubeMesh" id=2]
+size = Vector3( 6, 6, 6 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 30, 3, 3 )
+
+[sub_resource type="CubeMesh" id=4]
+size = Vector3( 60, 6, 6 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 3, 3, 33 )
+
+[sub_resource type="CubeMesh" id=6]
+size = Vector3( 6, 6, 66 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 3, 3, 3 )
+
+[sub_resource type="CubeMesh" id=8]
+size = Vector3( 6, 6, 6 )
+
+[sub_resource type="BoxShape" id=9]
+extents = Vector3( 3, 3, 3 )
+
+[sub_resource type="BoxShape" id=10]
+extents = Vector3( 3, 3, 3 )
+
+[sub_resource type="CubeMesh" id=11]
+size = Vector3( 6, 6, 6 )
+
+[sub_resource type="BoxShape" id=12]
+extents = Vector3( 3, 3, 3 )
+
+[sub_resource type="CubeMesh" id=13]
+size = Vector3( 6, 6, 6 )
+
+[sub_resource type="BoxShape" id=14]
+extents = Vector3( 3, 3, 3 )
+
+[sub_resource type="CubeMesh" id=15]
+size = Vector3( 6, 6, 6 )
+
+[sub_resource type="BoxShape" id=16]
+extents = Vector3( 3, 3, 3 )
+
+[sub_resource type="CubeMesh" id=17]
+size = Vector3( 6, 6, 6 )
+
+[node name="Level 1" type="Node"]
+script = ExtResource( 7 )
+sectors_to_disable = [ NodePath("Screen/Viewport/Sector 2") ]
+enemy_sectors_to_disable = PoolIntArray( 2 )
+interactable_sectors_to_disable = PoolIntArray( 2 )
+
+[node name="Screen" type="ViewportContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+stretch = true
+
+[node name="Viewport" type="Viewport" parent="Screen"]
+size = Vector2( 1024, 768 )
+handle_input_locally = false
+render_target_update_mode = 3
+audio_listener_enable_3d = true
+
+[node name="Player" parent="Screen/Viewport" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 3, -18 )
+
+[node name="Sector 1" parent="Screen/Viewport" instance=ExtResource( 18 )]
+
+[node name="Sector 2" parent="Screen/Viewport" instance=ExtResource( 4 )]
+
+[node name="Sector 1 Enemies" parent="Screen/Viewport" instance=ExtResource( 14 )]
+
+[node name="Sector 2 Enemies" parent="Screen/Viewport" instance=ExtResource( 15 )]
+
+[node name="Sector 1 Interactables" parent="Screen/Viewport" instance=ExtResource( 22 )]
+
+[node name="Sector 2 Interactables" parent="Screen/Viewport" instance=ExtResource( 21 )]
+
+[node name="Sector Manager" type="Spatial" parent="Screen/Viewport"]
+
+[node name="Sec 1 Enabler" type="Area" parent="Screen/Viewport/Sector Manager"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 3, -309 )
+script = ExtResource( 9 )
+sector_id = 1
+sector_path = NodePath("../../Sector 1")
+
+[node name="Collision" type="CollisionShape" parent="Screen/Viewport/Sector Manager/Sec 1 Enabler"]
+shape = SubResource( 1 )
+
+[node name="Mesh" type="MeshInstance" parent="Screen/Viewport/Sector Manager/Sec 1 Enabler/Collision"]
+mesh = SubResource( 2 )
+material/0 = ExtResource( 3 )
+script = ExtResource( 2 )
+
+[node name="Sec 1 Enabler 2" type="Area" parent="Screen/Viewport/Sector Manager"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 3, -255 )
+script = ExtResource( 9 )
+sector_id = 1
+sector_path = NodePath("../../Sector 1")
+
+[node name="Collision" type="CollisionShape" parent="Screen/Viewport/Sector Manager/Sec 1 Enabler 2"]
+shape = SubResource( 1 )
+
+[node name="Mesh" type="MeshInstance" parent="Screen/Viewport/Sector Manager/Sec 1 Enabler 2/Collision"]
+mesh = SubResource( 2 )
+material/0 = ExtResource( 3 )
+script = ExtResource( 2 )
+
+[node name="Sec 1 Disabler" type="Area" parent="Screen/Viewport/Sector Manager"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 3, -321 )
+script = ExtResource( 9 )
+disable = true
+sector_id = 1
+sector_path = NodePath("../../Sector 1")
+
+[node name="Collision" type="CollisionShape" parent="Screen/Viewport/Sector Manager/Sec 1 Disabler"]
+shape = SubResource( 3 )
+
+[node name="Mesh" type="MeshInstance" parent="Screen/Viewport/Sector Manager/Sec 1 Disabler/Collision"]
+mesh = SubResource( 4 )
+material/0 = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Sec 1 Disabler 2" type="Area" parent="Screen/Viewport/Sector Manager"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 3, -237 )
+script = ExtResource( 9 )
+disable = true
+sector_id = 1
+sector_path = NodePath("../../Sector 1")
+
+[node name="Collision" type="CollisionShape" parent="Screen/Viewport/Sector Manager/Sec 1 Disabler 2"]
+shape = SubResource( 5 )
+
+[node name="Mesh" type="MeshInstance" parent="Screen/Viewport/Sector Manager/Sec 1 Disabler 2/Collision"]
+mesh = SubResource( 6 )
+material/0 = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Sec 2 Enabler" type="Area" parent="Screen/Viewport/Sector Manager"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -39, 3, -219 )
+script = ExtResource( 9 )
+sector_id = 2
+sector_path = NodePath("../../Sector 2")
+
+[node name="Collision" type="CollisionShape" parent="Screen/Viewport/Sector Manager/Sec 2 Enabler"]
+shape = SubResource( 7 )
+
+[node name="Mesh" type="MeshInstance" parent="Screen/Viewport/Sector Manager/Sec 2 Enabler/Collision"]
+mesh = SubResource( 8 )
+material/0 = ExtResource( 3 )
+script = ExtResource( 2 )
+
+[node name="Sec 2 Disabler" type="Area" parent="Screen/Viewport/Sector Manager"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45, 3, -171 )
+script = ExtResource( 9 )
+disable = true
+sector_id = 2
+sector_path = NodePath("../../Sector 2")
+
+[node name="Collision" type="CollisionShape" parent="Screen/Viewport/Sector Manager/Sec 2 Disabler"]
+shape = SubResource( 9 )
+
+[node name="Mesh" type="MeshInstance" parent="Screen/Viewport/Sector Manager/Sec 2 Disabler/Collision"]
+mesh = SubResource( 8 )
+material/0 = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Sector 1 Boundary" type="Area" parent="Screen/Viewport/Sector Manager"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -39, 3, -231 )
+script = ExtResource( 17 )
+updated_sector_id = 1
+
+[node name="Collision" type="CollisionShape" parent="Screen/Viewport/Sector Manager/Sector 1 Boundary"]
+shape = SubResource( 10 )
+
+[node name="Mesh" type="MeshInstance" parent="Screen/Viewport/Sector Manager/Sector 1 Boundary/Collision"]
+mesh = SubResource( 11 )
+material/0 = ExtResource( 20 )
+script = ExtResource( 2 )
+
+[node name="Sector 2 Boundary" type="Area" parent="Screen/Viewport/Sector Manager"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 3, -297 )
+script = ExtResource( 17 )
+updated_sector_id = 2
+
+[node name="Collision" type="CollisionShape" parent="Screen/Viewport/Sector Manager/Sector 2 Boundary"]
+shape = SubResource( 12 )
+
+[node name="Mesh" type="MeshInstance" parent="Screen/Viewport/Sector Manager/Sector 2 Boundary/Collision"]
+mesh = SubResource( 13 )
+material/0 = ExtResource( 19 )
+script = ExtResource( 2 )
+
+[node name="Sector 2 Boundary 2" type="Area" parent="Screen/Viewport/Sector Manager"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 3, -255 )
+script = ExtResource( 17 )
+updated_sector_id = 2
+
+[node name="Collision" type="CollisionShape" parent="Screen/Viewport/Sector Manager/Sector 2 Boundary 2"]
+shape = SubResource( 12 )
+
+[node name="Mesh" type="MeshInstance" parent="Screen/Viewport/Sector Manager/Sector 2 Boundary 2/Collision"]
+mesh = SubResource( 13 )
+material/0 = ExtResource( 19 )
+script = ExtResource( 2 )
+
+[node name="Key Spawn Point" type="Spatial" parent="Screen/Viewport"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 165, 3, -213 )
+
+[node name="End Trigger" type="Area" parent="Screen/Viewport"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255, 3, -213 )
+script = ExtResource( 5 )
+
+[node name="Collision" type="CollisionShape" parent="Screen/Viewport/End Trigger"]
+shape = SubResource( 14 )
+
+[node name="Mesh" type="MeshInstance" parent="Screen/Viewport/End Trigger/Collision"]
+mesh = SubResource( 15 )
+material/0 = ExtResource( 6 )
+script = ExtResource( 2 )
+
+[node name="Boss Battle" type="Area" parent="Screen/Viewport"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 165, 3, -267 )
+script = ExtResource( 10 )
+level_music_manager_path = NodePath("../Music Manager")
+key_spawn_point_path = NodePath("../Key Spawn Point")
+
+[node name="Collision" type="CollisionShape" parent="Screen/Viewport/Boss Battle"]
+shape = SubResource( 16 )
+
+[node name="Mesh" type="MeshInstance" parent="Screen/Viewport/Boss Battle/Collision"]
+mesh = SubResource( 17 )
+material/0 = ExtResource( 11 )
+script = ExtResource( 2 )
+
+[node name="Music Manager" type="AudioStreamPlayer" parent="Screen/Viewport"]
+bus = "Music"
+script = ExtResource( 8 )
+
+[node name="Interface" parent="." instance=ExtResource( 12 )]
+outro_level_name = "Level 1 Outro"
+
+[node name="Debug" parent="." instance=ExtResource( 13 )]
+
+[connection signal="body_entered" from="Screen/Viewport/End Trigger" to="Screen/Viewport/End Trigger" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="Screen/Viewport/Boss Battle" to="Screen/Viewport/Boss Battle" method="_on_Boss_Battle_body_entered"]

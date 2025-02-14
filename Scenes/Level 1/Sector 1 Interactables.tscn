@@ -1,0 +1,324 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Prefabs/Interactables/Barrel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Interactables/Crate.tscn" type="PackedScene" id=4]
+
+[sub_resource type="PhysicsMaterial" id=1]
+rough = true
+absorbent = true
+
+[sub_resource type="PhysicsMaterial" id=2]
+rough = true
+absorbent = true
+
+[node name="Sector 1 Interactables" type="Spatial"]
+
+[node name="Crates" type="Spatial" parent="."]
+
+[node name="Crate 1" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1.5, -231 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 2" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 117, 1.5, -147 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 3" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 1.5, -147 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 4" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 123, 1.5, -147 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 5" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 123, 1.5, -123 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 6" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 117, 1.5, -123 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 7" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 1.5, -111 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 8" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 1.5, -105 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 9" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 1.5, -111 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 10" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 1.5, -51 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 11" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 1.5, -45 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 12" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 1.5, -45 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 13" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 1.5, -57 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 14" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 51, 1.5, -45 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 15" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 93, 1.5, -45 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 16" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 93, 1.5, -51.189 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 17" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 1.5, -45 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 18" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 98.8159, 1.5, -51.227 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 19" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 87, 1.5, -45 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 20" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 93, 1.5, -111 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 21" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 93, 1.5, -105 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 22" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 1.5, -111 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 23" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 1.5, -105 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 24" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 1.5, -99 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 25" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 69, 1.5, -147 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 26" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 69, 1.5, -123 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 27" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 1.5, -147 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 28" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 81, 1.5, -147 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 29" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 4.5, -231 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 30" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1.5, -231 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 31" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1.5, -231 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 32" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 1.5, -225 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 33" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 1.5, -219 )
+physics_material_override = SubResource( 1 )
+can_sleep = false
+sector_id = 1
+
+[node name="Crate 34" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 4.5, -225 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 35" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 1.5, -231 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 36" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 4.5, -231 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Crate 37" parent="Crates" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 7.5, -231 )
+physics_material_override = SubResource( 1 )
+sector_id = 1
+
+[node name="Barrels" type="Spatial" parent="."]
+
+[node name="Barrel 1" parent="Barrels" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 1.7, -231 )
+physics_material_override = SubResource( 2 )
+sector_id = 1
+
+[node name="Barrel 2" parent="Barrels" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 87, 1.7, -147 )
+physics_material_override = SubResource( 2 )
+sector_id = 1
+
+[node name="Barrel 3" parent="Barrels" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 1.7, -123 )
+physics_material_override = SubResource( 2 )
+sector_id = 1
+
+[node name="Barrel 4" parent="Barrels" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 1.7, -123 )
+physics_material_override = SubResource( 2 )
+sector_id = 1
+
+[node name="Barrel 5" parent="Barrels" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 87, 1.7, -111 )
+physics_material_override = SubResource( 2 )
+sector_id = 1
+
+[node name="Barrel 6" parent="Barrels" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 1.7, -105 )
+physics_material_override = SubResource( 2 )
+sector_id = 1
+
+[node name="Barrel 7" parent="Barrels" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 57, 1.7, -45 )
+physics_material_override = SubResource( 2 )
+sector_id = 1
+
+[node name="Barrel 8" parent="Barrels" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 1.7, -51 )
+physics_material_override = SubResource( 2 )
+sector_id = 1
+
+[node name="Barrel 9" parent="Barrels" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 81.1333, 1.8116, -44.929 )
+physics_material_override = SubResource( 2 )
+sector_id = 1
+
+[node name="Barrel 10" parent="Barrels" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 1.7, -57 )
+physics_material_override = SubResource( 2 )
+sector_id = 1
+
+[node name="Barrel 11" parent="Barrels" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 93, 1.7, -99 )
+physics_material_override = SubResource( 2 )
+sector_id = 1
+
+[node name="Barrel 12" parent="Barrels" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 1.7, -99 )
+physics_material_override = SubResource( 2 )
+sector_id = 1
+
+[node name="Barrel 13" parent="Barrels" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 1.7, -93 )
+physics_material_override = SubResource( 2 )
+sector_id = 1
+
+[node name="Barrel 14" parent="Barrels" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 51, 1.7, -111 )
+physics_material_override = SubResource( 2 )
+sector_id = 1
+
+[node name="Barrel 15" parent="Barrels" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 116.759, 1.8116, -140.911 )
+physics_material_override = SubResource( 2 )
+sector_id = 1
+
+[node name="Barrel 16" parent="Barrels" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 123, 1.7, -141 )
+physics_material_override = SubResource( 2 )
+sector_id = 1
+
+[node name="Barrel 17" parent="Barrels" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 1.7, -219 )
+physics_material_override = SubResource( 2 )
+sector_id = 1
+
+[node name="Barrel 18" parent="Barrels" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 1.7, -207 )
+physics_material_override = SubResource( 2 )
+sector_id = 1
+
+[node name="Barrel 19" parent="Barrels" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 1.7, -213 )
+physics_material_override = SubResource( 2 )
+sector_id = 1
+
+[node name="Barrel 20" parent="Barrels" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1.7, -207 )
+physics_material_override = SubResource( 2 )
+sector_id = 1
+
+[node name="Barrel 21" parent="Barrels" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 1.7, -207 )
+physics_material_override = SubResource( 2 )
+sector_id = 1
+
+[node name="Barrel 22" parent="Barrels" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1.7, -207 )
+physics_material_override = SubResource( 2 )
+sector_id = 1
+
+[node name="Barrel 23" parent="Barrels" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 1.7, -225 )
+physics_material_override = SubResource( 2 )
+sector_id = 1
+
+[node name="Barrel 24" parent="Barrels" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 1.7, -213 )
+physics_material_override = SubResource( 2 )
+sector_id = 1

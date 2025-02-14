@@ -1,0 +1,811 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/Interface/KeyBindingMenu.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Interface/Settings.gd" type="Script" id=4]
+[ext_resource path="res://Themes/Theme.tres" type="Theme" id=8]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.227451, 0.227451, 0.227451, 0.588235 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.901961, 0.796078, 0.0941176, 1 )
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.113725, 0.113725, 0.113725, 0.588235 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.901961, 0.796078, 0.0941176, 1 )
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.176471, 0.176471, 0.176471, 0.470588 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.901961, 0.796078, 0.0941176, 1 )
+anti_aliasing = false
+
+[node name="Settings" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -240.0
+margin_top = -230.0
+margin_right = 240.0
+margin_bottom = 230.0
+script = ExtResource( 4 )
+
+[node name="Tabs" type="TabContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 8 )
+tab_align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Graphics" type="Control" parent="Tabs"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 36.0
+margin_right = -2.0
+margin_bottom = -2.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="List" type="VBoxContainer" parent="Tabs/Graphics"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -160.0
+margin_top = -170.0
+margin_right = 160.0
+margin_bottom = 150.0
+custom_constants/separation = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fullscreen" type="CheckBox" parent="Tabs/Graphics/List"]
+margin_right = 320.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 230, 24 )
+focus_mode = 0
+theme = ExtResource( 8 )
+pressed = true
+enabled_focus_mode = 0
+text = "Fullscreen"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Vsync" type="CheckBox" parent="Tabs/Graphics/List"]
+margin_top = 29.0
+margin_right = 320.0
+margin_bottom = 53.0
+rect_min_size = Vector2( 230, 24 )
+focus_mode = 0
+theme = ExtResource( 8 )
+pressed = true
+enabled_focus_mode = 0
+text = "VSync"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Show FPS" type="CheckBox" parent="Tabs/Graphics/List"]
+margin_top = 58.0
+margin_right = 320.0
+margin_bottom = 82.0
+rect_min_size = Vector2( 230, 24 )
+focus_mode = 0
+theme = ExtResource( 8 )
+enabled_focus_mode = 0
+text = "Show FPS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Vertex Lighting" type="CheckBox" parent="Tabs/Graphics/List"]
+margin_top = 87.0
+margin_right = 320.0
+margin_bottom = 111.0
+rect_min_size = Vector2( 230, 24 )
+focus_mode = 0
+theme = ExtResource( 8 )
+enabled_focus_mode = 0
+text = "Vertex Lighting"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ambient Occlusion" type="CheckBox" parent="Tabs/Graphics/List"]
+margin_top = 116.0
+margin_right = 320.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 230, 24 )
+focus_mode = 0
+theme = ExtResource( 8 )
+enabled_focus_mode = 0
+text = "Ambient Occlusion"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UI Scaling" type="CheckBox" parent="Tabs/Graphics/List"]
+margin_top = 145.0
+margin_right = 320.0
+margin_bottom = 169.0
+rect_min_size = Vector2( 230, 24 )
+focus_mode = 0
+theme = ExtResource( 8 )
+enabled_focus_mode = 0
+text = "UI Scaling"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MSAA" type="CheckBox" parent="Tabs/Graphics/List"]
+margin_top = 174.0
+margin_right = 320.0
+margin_bottom = 198.0
+rect_min_size = Vector2( 230, 24 )
+focus_mode = 0
+theme = ExtResource( 8 )
+enabled_focus_mode = 0
+text = "4X MSAA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Screen Filter" type="CheckBox" parent="Tabs/Graphics/List"]
+margin_top = 203.0
+margin_right = 320.0
+margin_bottom = 227.0
+rect_min_size = Vector2( 230, 24 )
+focus_mode = 0
+theme = ExtResource( 8 )
+enabled_focus_mode = 0
+text = "Screen Filter"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resolution Scale" type="Control" parent="Tabs/Graphics/List"]
+margin_top = 232.0
+margin_right = 320.0
+margin_bottom = 272.0
+rect_min_size = Vector2( 230, 40 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slider" type="HSlider" parent="Tabs/Graphics/List/Resolution Scale"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -16.0
+theme = ExtResource( 8 )
+min_value = 0.25
+max_value = 2.0
+step = 0.25
+value = 1.0
+
+[node name="Label" type="Label" parent="Tabs/Graphics/List/Resolution Scale/Slider"]
+margin_top = -24.0
+margin_right = 176.0
+theme = ExtResource( 8 )
+text = "Resolution Scale"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Number" type="Label" parent="Tabs/Graphics/List/Resolution Scale/Slider"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -50.0
+margin_top = -24.0
+theme = ExtResource( 8 )
+text = "100%"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Max FPS" type="Control" parent="Tabs/Graphics/List"]
+margin_top = 277.0
+margin_right = 320.0
+margin_bottom = 317.0
+rect_min_size = Vector2( 230, 40 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slider" type="HSlider" parent="Tabs/Graphics/List/Max FPS"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -16.0
+theme = ExtResource( 8 )
+min_value = 5.0
+max_value = 241.0
+value = 241.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Tabs/Graphics/List/Max FPS/Slider"]
+margin_top = -24.0
+margin_right = 176.0
+text = "Max FPS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Number" type="Label" parent="Tabs/Graphics/List/Max FPS/Slider"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -100.0
+margin_top = -24.0
+custom_colors/font_color = Color( 0.901961, 0.796078, 0.0941176, 1 )
+text = "No Limit"
+align = 2
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Gameplay" type="Control" parent="Tabs"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 36.0
+margin_right = -2.0
+margin_bottom = -2.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="List" type="VBoxContainer" parent="Tabs/Gameplay"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -160.0
+margin_top = -170.0
+margin_right = 160.0
+margin_bottom = 150.0
+custom_constants/separation = 5
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Master" type="Control" parent="Tabs/Gameplay/List"]
+margin_top = 6.0
+margin_right = 320.0
+margin_bottom = 46.0
+rect_min_size = Vector2( 230, 40 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slider" type="HSlider" parent="Tabs/Gameplay/List/Master"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -16.0
+max_value = 1.0
+step = 0.01
+value = 0.8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Tabs/Gameplay/List/Master/Slider"]
+margin_top = -24.0
+margin_right = 76.0
+theme = ExtResource( 8 )
+text = "Master"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music" type="Control" parent="Tabs/Gameplay/List"]
+margin_top = 51.0
+margin_right = 320.0
+margin_bottom = 91.0
+rect_min_size = Vector2( 230, 40 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slider" type="HSlider" parent="Tabs/Gameplay/List/Music"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -16.0
+max_value = 1.0
+step = 0.01
+value = 0.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Tabs/Gameplay/List/Music/Slider"]
+margin_top = -24.0
+margin_right = 60.0
+theme = ExtResource( 8 )
+text = "Music"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SFX" type="Control" parent="Tabs/Gameplay/List"]
+margin_top = 96.0
+margin_right = 320.0
+margin_bottom = 136.0
+rect_min_size = Vector2( 230, 40 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slider" type="HSlider" parent="Tabs/Gameplay/List/SFX"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -16.0
+max_value = 1.0
+step = 0.01
+value = 0.4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Tabs/Gameplay/List/SFX/Slider"]
+margin_top = -24.0
+margin_right = 40.0
+margin_bottom = -10.0
+theme = ExtResource( 8 )
+text = "SFX"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FOV" type="Control" parent="Tabs/Gameplay/List"]
+margin_top = 141.0
+margin_right = 320.0
+margin_bottom = 181.0
+rect_min_size = Vector2( 230, 40 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slider" type="HSlider" parent="Tabs/Gameplay/List/FOV"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -16.0
+theme = ExtResource( 8 )
+min_value = 70.0
+max_value = 130.0
+value = 85.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Tabs/Gameplay/List/FOV/Slider"]
+margin_top = -24.0
+margin_right = 36.0
+theme = ExtResource( 8 )
+text = "FOV"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Number" type="Label" parent="Tabs/Gameplay/List/FOV/Slider"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -24.0
+margin_top = -24.0
+theme = ExtResource( 8 )
+text = "85"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mouse Sensitivity" type="Control" parent="Tabs/Gameplay/List"]
+margin_top = 186.0
+margin_right = 320.0
+margin_bottom = 226.0
+rect_min_size = Vector2( 230, 40 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slider" type="HSlider" parent="Tabs/Gameplay/List/Mouse Sensitivity"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -16.0
+theme = ExtResource( 8 )
+min_value = 0.01
+max_value = 0.5
+step = 0.01
+value = 0.11
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Tabs/Gameplay/List/Mouse Sensitivity/Slider"]
+margin_top = -24.0
+margin_right = 188.0
+theme = ExtResource( 8 )
+text = "Mouse Sensitivity"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Invert Mouse" type="CheckBox" parent="Tabs/Gameplay/List"]
+margin_top = 231.0
+margin_right = 320.0
+margin_bottom = 255.0
+rect_min_size = Vector2( 230, 24 )
+focus_mode = 0
+theme = ExtResource( 8 )
+pressed = true
+enabled_focus_mode = 0
+text = "Invert Mouse"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Show HUD" type="CheckBox" parent="Tabs/Gameplay/List"]
+margin_top = 260.0
+margin_right = 320.0
+margin_bottom = 284.0
+rect_min_size = Vector2( 230, 24 )
+focus_mode = 0
+theme = ExtResource( 8 )
+pressed = true
+enabled_focus_mode = 0
+text = "Show HUD"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Show Crosshair" type="CheckBox" parent="Tabs/Gameplay/List"]
+margin_top = 289.0
+margin_right = 320.0
+margin_bottom = 313.0
+rect_min_size = Vector2( 230, 24 )
+focus_mode = 0
+theme = ExtResource( 8 )
+pressed = true
+enabled_focus_mode = 0
+text = "Show Crosshair"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Input Map" type="Control" parent="Tabs"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 36.0
+margin_right = -2.0
+margin_bottom = -2.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Scroll Menu" type="ScrollContainer" parent="Tabs/Input Map"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -225.0
+margin_top = -175.0
+margin_right = 225.0
+margin_bottom = 155.0
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="List" type="VBoxContainer" parent="Tabs/Input Map/Scroll Menu"]
+margin_right = 430.0
+margin_bottom = 435.0
+custom_constants/separation = 5
+alignment = 1
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="move_forward" type="Control" parent="Tabs/Input Map/Scroll Menu/List"]
+margin_right = 430.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 430, 50 )
+mouse_filter = 2
+
+[node name="Name" type="Label" parent="Tabs/Input Map/Scroll Menu/List/move_forward"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 10.0
+margin_top = -12.0
+margin_right = 160.0
+margin_bottom = 12.0
+theme = ExtResource( 8 )
+text = "Move Forward"
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Tabs/Input Map/Scroll Menu/List/move_forward"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -170.0
+margin_top = -20.0
+margin_right = -10.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 40 )
+focus_mode = 0
+theme = ExtResource( 8 )
+text = "W"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="move_left" type="Control" parent="Tabs/Input Map/Scroll Menu/List"]
+margin_top = 55.0
+margin_right = 430.0
+margin_bottom = 105.0
+rect_min_size = Vector2( 430, 50 )
+mouse_filter = 2
+
+[node name="Name" type="Label" parent="Tabs/Input Map/Scroll Menu/List/move_left"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 10.0
+margin_top = -12.0
+margin_right = 160.0
+margin_bottom = 12.0
+theme = ExtResource( 8 )
+text = "Move Left"
+clip_text = true
+
+[node name="Button" type="Button" parent="Tabs/Input Map/Scroll Menu/List/move_left"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -170.0
+margin_top = -20.0
+margin_right = -10.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 40 )
+theme = ExtResource( 8 )
+text = "A"
+
+[node name="move_back" type="Control" parent="Tabs/Input Map/Scroll Menu/List"]
+margin_top = 110.0
+margin_right = 430.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 430, 50 )
+mouse_filter = 2
+
+[node name="Name" type="Label" parent="Tabs/Input Map/Scroll Menu/List/move_back"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 10.0
+margin_top = -12.0
+margin_right = 160.0
+margin_bottom = 12.0
+theme = ExtResource( 8 )
+text = "Move Back"
+clip_text = true
+
+[node name="Button" type="Button" parent="Tabs/Input Map/Scroll Menu/List/move_back"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -170.0
+margin_top = -20.0
+margin_right = -10.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 40 )
+theme = ExtResource( 8 )
+text = "S"
+
+[node name="move_right" type="Control" parent="Tabs/Input Map/Scroll Menu/List"]
+margin_top = 165.0
+margin_right = 430.0
+margin_bottom = 215.0
+rect_min_size = Vector2( 430, 50 )
+mouse_filter = 2
+
+[node name="Name" type="Label" parent="Tabs/Input Map/Scroll Menu/List/move_right"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 10.0
+margin_top = -12.0
+margin_right = 160.0
+margin_bottom = 12.0
+theme = ExtResource( 8 )
+text = "Move Right"
+clip_text = true
+
+[node name="Button" type="Button" parent="Tabs/Input Map/Scroll Menu/List/move_right"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -170.0
+margin_top = -20.0
+margin_right = -10.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 40 )
+theme = ExtResource( 8 )
+text = "D"
+
+[node name="run" type="Control" parent="Tabs/Input Map/Scroll Menu/List"]
+margin_top = 220.0
+margin_right = 430.0
+margin_bottom = 270.0
+rect_min_size = Vector2( 430, 50 )
+mouse_filter = 2
+
+[node name="Name" type="Label" parent="Tabs/Input Map/Scroll Menu/List/run"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 10.0
+margin_top = -12.0
+margin_right = 160.0
+margin_bottom = 12.0
+theme = ExtResource( 8 )
+text = "Run"
+clip_text = true
+
+[node name="Button" type="Button" parent="Tabs/Input Map/Scroll Menu/List/run"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -170.0
+margin_top = -20.0
+margin_right = -10.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 40 )
+theme = ExtResource( 8 )
+text = "Shift"
+
+[node name="jump" type="Control" parent="Tabs/Input Map/Scroll Menu/List"]
+margin_top = 275.0
+margin_right = 430.0
+margin_bottom = 325.0
+rect_min_size = Vector2( 430, 50 )
+mouse_filter = 2
+
+[node name="Name" type="Label" parent="Tabs/Input Map/Scroll Menu/List/jump"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 10.0
+margin_top = -12.0
+margin_right = 160.0
+margin_bottom = 12.0
+theme = ExtResource( 8 )
+text = "Jump"
+clip_text = true
+
+[node name="Button" type="Button" parent="Tabs/Input Map/Scroll Menu/List/jump"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -170.0
+margin_top = -20.0
+margin_right = -10.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 40 )
+theme = ExtResource( 8 )
+text = "Space"
+
+[node name="fire" type="Control" parent="Tabs/Input Map/Scroll Menu/List"]
+margin_top = 330.0
+margin_right = 430.0
+margin_bottom = 380.0
+rect_min_size = Vector2( 430, 50 )
+mouse_filter = 2
+
+[node name="Name" type="Label" parent="Tabs/Input Map/Scroll Menu/List/fire"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 10.0
+margin_top = -12.0
+margin_right = 160.0
+margin_bottom = 12.0
+theme = ExtResource( 8 )
+text = "Fire"
+clip_text = true
+
+[node name="Button" type="Button" parent="Tabs/Input Map/Scroll Menu/List/fire"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -170.0
+margin_top = -20.0
+margin_right = -10.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 40 )
+theme = ExtResource( 8 )
+text = "Mouse 1"
+
+[node name="pause" type="Control" parent="Tabs/Input Map/Scroll Menu/List"]
+margin_top = 385.0
+margin_right = 430.0
+margin_bottom = 435.0
+rect_min_size = Vector2( 430, 50 )
+mouse_filter = 2
+
+[node name="Name" type="Label" parent="Tabs/Input Map/Scroll Menu/List/pause"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 10.0
+margin_top = -12.0
+margin_right = 160.0
+margin_bottom = 12.0
+theme = ExtResource( 8 )
+text = "Pause"
+clip_text = true
+
+[node name="Button" type="Button" parent="Tabs/Input Map/Scroll Menu/List/pause"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -170.0
+margin_top = -20.0
+margin_right = -10.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 40 )
+theme = ExtResource( 8 )
+text = "Escape"
+
+[node name="Save And Close" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -100.0
+margin_top = -40.0
+rect_min_size = Vector2( 0, 40 )
+focus_mode = 0
+theme = ExtResource( 8 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Close"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Save And Close" to="." method="_on_Close_Settings_Button_pressed"]

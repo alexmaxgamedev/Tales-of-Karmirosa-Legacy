@@ -1,0 +1,133 @@
+Godot Game Engine License
+
+License - MIT License
+
+Copyright (c) 2014-present Godot Engine contributors.
+Copyright (c) 2007-2014 Juan Linietsky, Ariel Manzur.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-- Godot Engine <https://godotengine.org>
+
+Godot Engine Third Party Licenses in Godot_Thirdparty_3_5_3.txt file.
+
+Other Third Party Licenses
+
+FreeType Disclaimer - This software is based in part on the work of the FreeType Team. (www.freetype.org)
+Freetype License Attribution in Godot_Thirdparty_3_5_3.txt file.
+
+Game Font License
+
+Name - Ken Pixel Square
+
+Author - Kenney (Kenney Vleugels)
+Author's Website - https://kenney.nl/
+License - (CC0) https://creativecommons.org/publicdomain/zero/1.0/
+Link - https://opengameart.org/content/kenney-fonts
+Alternative Link - https://kenney.nl/assets/kenney-fonts
+
+HDR Skybox license
+
+Author Jacopo Voltolina
+Link - https://polyhaven.com/a/suburban_parking_area
+License - (CC0) https://creativecommons.org/publicdomain/zero/1.0/
+
+Music Licenses
+
+Music Title - Boss Battle #2 8-Bit
+
+Author - nene
+Link - https://opengameart.org/content/boss-battle-2-8-bit
+License - (CC0) https://creativecommons.org/publicdomain/zero/1.0/
+
+Music Title - RPG Main Theme
+
+Author - JSKNYC
+Link - https://opengameart.org/content/rpg-main-theme
+License - (CC-BY 3.0) https://creativecommons.org/licenses/by/3.0/
+Modifications - Technical Modifications
+
+Music Title - 8 Bit The Hero
+
+Author - ShwiggityShwag
+Link - https://opengameart.org/content/8-bit-the-hero
+License - (CC0) https://creativecommons.org/publicdomain/zero/1.0/
+
+Music Title - Boss Battle Theme
+
+Author - CleytonKauffman (Cleyton Kauffman)
+Author's Website - https://soundcloud.com/cleytonkauffman
+Link - https://opengameart.org/content/boss-battle-theme
+License - (OGA-BY 3.0) https://static.opengameart.org/OGA-BY-3.0.txt
+Modifications - Technical Modifications
+
+Music Title - 8 bit battle theme
+
+Author - celestialghost8
+Link - https://opengameart.org/content/8-bit-battle-theme-famitracker
+License - (CC0) https://creativecommons.org/publicdomain/zero/1.0/
+
+Sound Effect Licences
+
+Title - Pistol Shot
+
+Author - LeMudCrab
+Link - https://freesound.org/people/LeMudCrab/sounds/163456/
+License - (CC0) https://creativecommons.org/publicdomain/zero/1.0/
+
+Title - Completed
+
+Author - Kenneth_Cooney
+Link - https://freesound.org/people/Kenneth_Cooney/sounds/609336/
+License - (CC0) https://creativecommons.org/publicdomain/zero/1.0/
+
+All 3D models and other art were created by me.
+SFXR program was used for the other sound effects that were made by me.
+
+License for all the art or other non-code assets made by me for this game.
+(CC0) https://creativecommons.org/publicdomain/zero/1.0/
+
+The story and events happening in this video game are entirely fictional.
+Any similarities to real persons or events are purely coincidental.
+
+License for this game
+
+Tales of Karmirosa Legacy
+
+License - MIT License
+
+Copyright (c) 2021 Alexmax
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

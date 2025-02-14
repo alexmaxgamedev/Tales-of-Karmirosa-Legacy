@@ -1,0 +1,479 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Models/Buildings/Buildings_L1_S2.scn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/Interactables/Door.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Prefabs/Decorations/Ceiling Light.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Prefabs/Pickups/Health Pack.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Prefabs/Decorations/Tree Decoration.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Prefabs/Decorations/Tree.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Prefabs/Interactables/Keypad.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Prefabs/Pickups/Ammo.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Prefabs/Pickups/Key.tscn" type="PackedScene" id=19]
+
+[node name="Sector 2" type="Spatial"]
+
+[node name="Keys" type="Spatial" parent="."]
+
+[node name="Red Key" parent="Keys" instance=ExtResource( 19 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 141, 2.15, -429 )
+type = "red"
+color = Color( 0.937255, 0.0352941, 0.0352941, 1 )
+
+[node name="Green Key" parent="Keys" instance=ExtResource( 19 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 93, 2.15, -165 )
+type = "green"
+color = Color( 0.517647, 0.717647, 0.113725, 1 )
+
+[node name="Ammos" type="Spatial" parent="."]
+
+[node name="Ammo 1" parent="Ammos" instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 2.15, -279 )
+
+[node name="Ammo 2" parent="Ammos" instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45, 2.15, -297 )
+
+[node name="Ammo 3" parent="Ammos" instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 93, 2.15, -279 )
+
+[node name="Ammo 4" parent="Ammos" instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 93, 2.15, -315 )
+
+[node name="Ammo 5" parent="Ammos" instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 69, 2.15, -279 )
+
+[node name="Ammo 6" parent="Ammos" instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 2.15, -285 )
+
+[node name="Ammo 7" parent="Ammos" instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 2.15, -213 )
+
+[node name="Ammo 8" parent="Ammos" instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 2.15, -261 )
+
+[node name="Ammo 9" parent="Ammos" instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 87, 2.15, -165 )
+
+[node name="Ammo 10" parent="Ammos" instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 177, 2.15, -309 )
+
+[node name="Health Packs" type="Spatial" parent="."]
+
+[node name="Health Pack 1" parent="Health Packs" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 2.15, -213 )
+
+[node name="Health Pack 2" parent="Health Packs" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 2.15, -285 )
+
+[node name="Health Pack 3" parent="Health Packs" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 2.15, -165 )
+
+[node name="Health Pack 4" parent="Health Packs" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 177, 2.15, -285 )
+
+[node name="Health Pack 5" parent="Health Packs" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -51, 2.15, -237 )
+
+[node name="Health Pack 6" parent="Health Packs" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 2.15, -429 )
+
+[node name="Doors" type="Spatial" parent="."]
+
+[node name="Door 1" parent="Doors" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 63, 0, -273 )
+can_be_opened = false
+
+[node name="Door 2" parent="Doors" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -303 )
+
+[node name="Door 3" parent="Doors" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 0, -321 )
+
+[node name="Door 4" parent="Doors" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 81, 0, -201 )
+
+[node name="Door 5" parent="Doors" instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 15, 0, -255 )
+can_be_opened = false
+
+[node name="Door 6" parent="Doors" instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 81, 0, -297 )
+
+[node name="Door 7" parent="Doors" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 165, 0, -273 )
+can_be_opened = false
+
+[node name="Door 8" parent="Doors" instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 225, 0, -213 )
+can_be_opened = false
+
+[node name="Keypads" type="Spatial" parent="."]
+
+[node name="Red Keypad 4" parent="Keypads" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 5.24537e-07, 0, 1, 0, -5.24537e-07, 0, 1, 69, 3, -270 )
+color = Color( 0.937255, 0.0352941, 0.0352941, 1 )
+type = "red"
+door_path = NodePath("../../Doors/Door 1")
+second_keypad_path = NodePath("../Red Keypad 3")
+
+[node name="Red Keypad 3" parent="Keypads" instance=ExtResource( 17 )]
+transform = Transform( -1, 0, -5.96046e-07, 0, 1, 0, 5.96046e-07, 0, -1, 57, 3, -276 )
+color = Color( 0.937255, 0.0352941, 0.0352941, 1 )
+type = "red"
+door_path = NodePath("../../Doors/Door 1")
+second_keypad_path = NodePath("../Red Keypad 4")
+
+[node name="Red Keypad 2" parent="Keypads" instance=ExtResource( 17 )]
+transform = Transform( -5.52335e-07, 0, 1, 0, 1, 0, -1, 0, -5.52335e-07, 18, 3, -261 )
+color = Color( 0.937255, 0.0352941, 0.0352941, 1 )
+type = "red"
+door_path = NodePath("../../Doors/Door 5")
+second_keypad_path = NodePath("../Red Keypad 1")
+
+[node name="Red Keypad 1" parent="Keypads" instance=ExtResource( 17 )]
+transform = Transform( 6.39758e-07, 0, -1, 0, 1, 0, 1, 0, 6.39758e-07, 12, 3, -249 )
+color = Color( 0.937255, 0.0352941, 0.0352941, 1 )
+type = "red"
+door_path = NodePath("../../Doors/Door 5")
+second_keypad_path = NodePath("../Red Keypad 2")
+
+[node name="Purple Keypad 1" parent="Keypads" instance=ExtResource( 17 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 222, 3, -207 )
+color = Color( 0.458824, 0.137255, 0.721569, 1 )
+type = "purple"
+door_path = NodePath("../../Doors/Door 8")
+second_keypad_path = NodePath("../Purple Keypad 2")
+
+[node name="Purple Keypad 2" parent="Keypads" instance=ExtResource( 17 )]
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 228, 3, -219 )
+color = Color( 0.458824, 0.137255, 0.721569, 1 )
+type = "purple"
+door_path = NodePath("../../Doors/Door 8")
+second_keypad_path = NodePath("../Purple Keypad 1")
+
+[node name="Green Keypad 1" parent="Keypads" instance=ExtResource( 17 )]
+transform = Transform( -1, 0, -2.62268e-07, 0, 1, 0, 2.62268e-07, 0, -1, 159, 3, -276 )
+color = Color( 0.517647, 0.717647, 0.113725, 1 )
+type = "green"
+door_path = NodePath("../../Doors/Door 7")
+second_keypad_path = NodePath("../Green Keypad 2")
+
+[node name="Green Keypad 2" parent="Keypads" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 3.49691e-07, 0, 1, 0, -3.49691e-07, 0, 1, 171, 3, -270 )
+color = Color( 0.517647, 0.717647, 0.113725, 1 )
+type = "green"
+door_path = NodePath("../../Doors/Door 7")
+second_keypad_path = NodePath("../Green Keypad 1")
+
+[node name="Lights" type="Spatial" parent="."]
+
+[node name="Cailing Light 1" parent="Lights" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 84, 12, -177 )
+
+[node name="OmniLight29" type="OmniLight" parent="Lights/Cailing Light 1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 0 )
+light_color = Color( 0.917647, 0.909804, 0.835294, 1 )
+light_energy = 2.0
+light_cull_mask = 2147483647
+omni_range = 20.0
+
+[node name="Cailing Light 2" parent="Lights" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 165, 30, -213 )
+
+[node name="OmniLight" type="OmniLight" parent="Lights/Cailing Light 2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -15, 0 )
+light_color = Color( 0.917647, 0.909804, 0.835294, 1 )
+light_energy = 2.0
+light_cull_mask = 2147483647
+shadow_bias = 1.06
+shadow_contact = 2.17
+omni_range = 68.5785
+
+[node name="Cailing Light 3" parent="Lights" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 243, 12, -213 )
+
+[node name="OmniLight" type="OmniLight" parent="Lights/Cailing Light 3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 0 )
+light_color = Color( 0.917647, 0.909804, 0.835294, 1 )
+light_energy = 2.0
+light_cull_mask = 2147483647
+omni_range = 25.0
+
+[node name="Cailing Light 4" parent="Lights" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 164.979, 12, -297.002 )
+
+[node name="OmniLight" type="OmniLight" parent="Lights/Cailing Light 4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 0 )
+light_color = Color( 0.917647, 0.909804, 0.835294, 1 )
+light_energy = 2.0
+light_cull_mask = 2147483647
+omni_range = 23.0
+
+[node name="Cailing Light 5" parent="Lights" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 143.979, 12, -297.002 )
+
+[node name="OmniLight" type="OmniLight" parent="Lights/Cailing Light 5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 0 )
+light_color = Color( 0.917647, 0.909804, 0.835294, 1 )
+light_energy = 2.0
+light_cull_mask = 2147483647
+omni_range = 23.0
+
+[node name="Cailing Light 6" parent="Lights" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 119.979, 12, -297.002 )
+
+[node name="OmniLight" type="OmniLight" parent="Lights/Cailing Light 6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 0 )
+light_color = Color( 0.917647, 0.909804, 0.835294, 1 )
+light_energy = 2.0
+light_cull_mask = 2147483647
+omni_range = 23.0
+
+[node name="Cailing Light 7" parent="Lights" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 98.9788, 12, -297.002 )
+
+[node name="OmniLight" type="OmniLight" parent="Lights/Cailing Light 7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 0 )
+light_color = Color( 0.917647, 0.909804, 0.835294, 1 )
+light_energy = 2.0
+light_cull_mask = 2147483647
+omni_range = 23.0
+
+[node name="Cailing Light 8" parent="Lights" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 12, -294 )
+
+[node name="OmniLight" type="OmniLight" parent="Lights/Cailing Light 8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 0 )
+light_color = Color( 0.917647, 0.909804, 0.835294, 1 )
+light_energy = 2.0
+light_cull_mask = 2147483647
+omni_range = 20.0
+
+[node name="Cailing Light 9" parent="Lights" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 18, -237 )
+
+[node name="OmniLight" type="OmniLight" parent="Lights/Cailing Light 9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9, 0 )
+light_color = Color( 0.917647, 0.909804, 0.835294, 1 )
+light_energy = 2.0
+light_cull_mask = 2147483647
+omni_range = 50.0
+
+[node name="Cailing Light 10" parent="Lights" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 12, -312 )
+
+[node name="OmniLight" type="OmniLight" parent="Lights/Cailing Light 10"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 0 )
+light_color = Color( 0.917647, 0.909804, 0.835294, 1 )
+light_energy = 2.0
+light_cull_mask = 2147483647
+omni_range = 20.0
+
+[node name="Cailing Light 11" parent="Lights" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 12, -330 )
+
+[node name="OmniLight" type="OmniLight" parent="Lights/Cailing Light 11"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 0 )
+light_color = Color( 0.917647, 0.909804, 0.835294, 1 )
+light_energy = 2.0
+light_cull_mask = 2147483647
+omni_range = 20.0
+
+[node name="Cailing Light 12" parent="Lights" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 12, -270 )
+
+[node name="OmniLight" type="OmniLight" parent="Lights/Cailing Light 12"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 0 )
+light_color = Color( 0.917647, 0.909804, 0.835294, 1 )
+light_energy = 2.0
+light_cull_mask = 2147483647
+omni_range = 35.0
+
+[node name="Cailing Light 13" parent="Lights" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 12, -288 )
+
+[node name="OmniLight" type="OmniLight" parent="Lights/Cailing Light 13"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 0 )
+light_color = Color( 0.917647, 0.909804, 0.835294, 1 )
+light_energy = 2.0
+light_cull_mask = 2147483647
+omni_range = 20.0
+
+[node name="Trees" type="Spatial" parent="."]
+
+[node name="Tree 1" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -369 )
+
+[node name="Tree 2" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, -405 )
+
+[node name="Tree 3" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, -405 )
+
+[node name="Tree 4" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 81, 0, -393 )
+
+[node name="Tree 5" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 0, -387 )
+
+[node name="Tree 6" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 93, 0, -405 )
+
+[node name="Tree 7" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 93, 0, -369 )
+
+[node name="Tree 8" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 51, 0, -375 )
+
+[node name="Tree 9" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 57, 0, -387 )
+
+[node name="Tree 10" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -411 )
+
+[node name="Tree 11" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -393 )
+
+[node name="Tree 12" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -387 )
+
+[node name="Tree 13" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 0, -375 )
+
+[node name="Tree 14" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 0, -351 )
+
+[node name="Tree 15" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 93, 0, -351 )
+
+[node name="Tree 16" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 93, 0, -339 )
+
+[node name="Tree 17" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 129, 0, -339 )
+
+[node name="Tree 18" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 0, -375 )
+
+[node name="Tree 19" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 117, 0, -399 )
+
+[node name="Tree 20" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 129, 0, -423 )
+
+[node name="Tree 21" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 87, 0, -423 )
+
+[node name="Tree 22" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, -417 )
+
+[node name="Tree 23" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, -417 )
+
+[node name="Tree 24" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -423 )
+
+[node name="Tree 25" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -411 )
+
+[node name="Tree 26" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, -399 )
+
+[node name="Tree 27" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -363 )
+
+[node name="Tree 28" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -339 )
+
+[node name="Tree 29" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -333 )
+
+[node name="Tree 30" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -321 )
+
+[node name="Tree 31" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -321 )
+
+[node name="Tree 32" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, -351 )
+
+[node name="Tree 33" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -357 )
+
+[node name="Tree 34" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, -375 )
+
+[node name="Tree 35" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 129, 0, -387 )
+
+[node name="Tree 36" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 111, 0, -417 )
+
+[node name="Tree 37" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 129, 0, -357 )
+
+[node name="Tree 38" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 63, 0, -399 )
+
+[node name="Tree 39" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 129, 0, -411 )
+
+[node name="Tree 40" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, -387 )
+
+[node name="Tree 41" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -381 )
+
+[node name="Tree 42" parent="Trees" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, -381 )
+
+[node name="Tree Decorations" type="Spatial" parent="."]
+
+[node name="Tree Decoration 1" parent="Tree Decorations" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -207 )
+
+[node name="Tree Decoration 2" parent="Tree Decorations" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -267 )
+
+[node name="Tree Decoration 3" parent="Tree Decorations" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 0, -267 )
+
+[node name="Tree Decoration 4" parent="Tree Decorations" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 0, -207 )
+
+[node name="Tree Decoration 5" parent="Tree Decorations" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -51, 0, -231 )
+
+[node name="Tree Decoration 6" parent="Tree Decorations" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 0, -231 )
+
+[node name="Tree Decoration 7" parent="Tree Decorations" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -243 )
+
+[node name="Tree Decoration 8" parent="Tree Decorations" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, -279 )
+
+[node name="Tree Decoration 9" parent="Tree Decorations" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, -297 )
+
+[node name="Tree Decoration 10" parent="Tree Decorations" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -51, 0, -297 )
+
+[node name="Tree Decoration 11" parent="Tree Decorations" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 87, 0, -315 )
+
+[node name="Tree Decoration 12" parent="Tree Decorations" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 87, 0, -279 )
+
+[node name="Tree Decoration 13" parent="Tree Decorations" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 177, 0, -279 )
+
+[node name="Tree Decoration 14" parent="Tree Decorations" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 177, 0, -315 )
+
+[node name="Tree Decoration 15" parent="Tree Decorations" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, -279 )
+
+[node name="Tree Decoration 16" parent="Tree Decorations" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, -279 )
+
+[node name="Buildings" parent="." instance=ExtResource( 6 )]

@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Models/Pickups/Health Pack.mesh" type="ArrayMesh" id=1]
+[ext_resource path="res://Materials/Environment/Environment.material" type="Material" id=2]
+[ext_resource path="res://Scripts/Items/ItemHover.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Items/HealthPack.gd" type="Script" id=4]
+[ext_resource path="res://Audio/Sound Effects/pick_up.wav" type="AudioStream" id=5]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 1.2, 0.9, 1.2 )
+
+[node name="Health Pack" type="Spatial"]
+script = ExtResource( 4 )
+
+[node name="Mesh" type="MeshInstance" parent="."]
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 2 )
+script = ExtResource( 3 )
+
+[node name="Area" type="Area" parent="Mesh"]
+
+[node name="Collision" type="CollisionShape" parent="Mesh/Area"]
+shape = SubResource( 1 )
+
+[node name="Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+bus = "SFX"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true
+[connection signal="body_entered" from="Mesh/Area" to="." method="_on_Area_body_entered"]
