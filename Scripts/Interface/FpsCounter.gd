@@ -10,7 +10,7 @@ func _process(_delta) -> void:
 	fps = Engine.get_frames_per_second()
 	self.set_text(str(fps))
 
-	if fps >= 40.0:
+	if fps >= 60.0:
 		self.set(label_color, Color.green)
 	if fps >= 20.0 and fps < 60.0:
 		self.set(label_color, Color.yellow)
