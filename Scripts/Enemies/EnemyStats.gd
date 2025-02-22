@@ -11,7 +11,9 @@ func add_enemy(enemy : KinematicBody) -> void:
 func set_enemy_state(state : bool, sector_id : int) -> void:
 	for enemy in enemies:
 		if enemy.get_sector_id() == sector_id:
-			enemy.set_physics_process(state)
+			if enemy.can_change_activation == true:
+				enemy.set_physics_process(state)
+
 			enemy.set_visible(state)
 
 func reset_enemies() -> void:
