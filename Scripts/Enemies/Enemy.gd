@@ -54,6 +54,8 @@ var indexes : Array = [0, 1, 2, 3, 4]
 var switch_index : int = 2
 var anim_index : int = 0
 
+var can_change_activation : bool = true
+
 func _ready() -> void:
 	EnemyStats.add_enemy(self)
 	set_priority_order()
@@ -124,6 +126,7 @@ func damage(value : int) -> void:
 func die() -> void:
 	animation.play("die")
 	collision.set_deferred("disabled", true)
+	can_change_activation = false
 	self.set_physics_process(false)
 
 	if is_boss == true:
