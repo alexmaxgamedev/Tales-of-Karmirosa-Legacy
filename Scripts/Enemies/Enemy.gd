@@ -115,8 +115,8 @@ func _physics_process(_delta) -> void:
 func damage(value : int) -> void:
 	if health > 0:
 		health -= value
-		direction_to_player = Vector3.ZERO
 		animation.play("recover")
+		direction_to_player = Vector3.ZERO
 		self.set_physics_process(false)
 	if health <= 0:
 		die()
