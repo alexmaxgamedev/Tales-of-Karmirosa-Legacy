@@ -194,6 +194,7 @@ attenuation_filter_cutoff_hz = 20500.0
 attenuation_filter_db = -10.0
 
 [node name="Animation" type="AnimationPlayer" parent="."]
+method_call_mode = 1
 anims/die = SubResource( 2 )
 anims/idle = SubResource( 4 )
 anims/recover = SubResource( 3 )
